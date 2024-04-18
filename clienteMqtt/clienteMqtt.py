@@ -15,7 +15,7 @@ async def main():
         os.environ['SERVIDOR'],
         protocol=ProtocolVersion.V31,
         port=8883,
-        tls_context=tls_context,
+        tls_context=tls_context
     ) as client:
         async with client.messages() as messages:
             await client.subscribe(os.environ['TOPICO'])
