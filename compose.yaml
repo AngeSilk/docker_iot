@@ -25,6 +25,7 @@ services:
       - mariadb
   clientemqtt:
     image: clientemqtt
+    build: ./clienteMqtt
     container_name: clientemqtt
     environment:
       - TZ=America/Argentina/Buenos_Aires 
@@ -101,6 +102,7 @@ services:
     restart: unless-stopped
   telegrambot:
     image: telegrambot
+    build: ./telegrambot
     container_name: telegrambot
     environment:
       - TZ=America/Argentina/Buenos_Aires 
